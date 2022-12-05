@@ -21,9 +21,9 @@ class IntroView(arcade.View):
                          arcade.color.BLACK, font_size=36, anchor_x="center")
         arcade.draw_text("if you get hit by the mold you lose", SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 + 50,
                          arcade.color.BLACK, font_size=36, anchor_x="center")
-        arcade.draw_text("try to cut as much of the", SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2,
+        arcade.draw_text("try to last as", SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2,
                          arcade.color.BLACK, font_size=36, anchor_x="center")
-        arcade.draw_text("bread as possible", SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - 50,
+        arcade.draw_text("long as you can", SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - 50,
                          arcade.color.BLACK, font_size=40, anchor_x="center")
         arcade.draw_text("Click to advance", SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2 - 225,
                          arcade.color.GRAY, font_size=20, anchor_x="center")
@@ -44,11 +44,11 @@ class Mold (arcade.Sprite):
         ## bounce off sides
         if self.left <= 0 or self.right >= SCREEN_WIDTH:
             arcade.play_sound(self.bounce_sound)
-            self.change_x *= -1.02
+            self.change_x *= -1.05
 
         elif self.bottom <=0 or self.top >= SCREEN_HEIGHT:
             arcade.play_sound(self.bounce_sound)
-            self.change_y *= -1.02
+            self.change_y *= -1.05
 
         self.center_x += self.change_x
         super(Mold,self).update()
