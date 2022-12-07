@@ -48,7 +48,7 @@ class Mold (arcade.Sprite):
 
         elif self.bottom <=0 or self.top >= SCREEN_HEIGHT:
             arcade.play_sound(self.bounce_sound)
-            self.change_y *= -1.1
+            self.change_y *= -1.09
 
         self.center_x += self.change_x
         super(Mold,self).update()
