@@ -44,11 +44,11 @@ class Mold (arcade.Sprite):
         ## bounce off sides
         if self.left <= 0 or self.right >= SCREEN_WIDTH:
             arcade.play_sound(self.bounce_sound)
-            self.change_x *= -1.05
+            self.change_x *= -1.1
 
         elif self.bottom <=0 or self.top >= SCREEN_HEIGHT:
             arcade.play_sound(self.bounce_sound)
-            self.change_y *= -1.05
+            self.change_y *= -1.1
 
         self.center_x += self.change_x
         super(Mold,self).update()
